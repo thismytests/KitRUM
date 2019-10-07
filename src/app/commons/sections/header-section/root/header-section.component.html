@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand"
+       (click)="relocateHome()">
+      <div class="logo-wrapper item-height link">
+        <img src="assets/logo.svg" alt="" class="logo">
+      </div>
+    </a>
+
+    <!--for media query-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-group collapse navbar-collapse" id="navbarSupportedContent">
+      <!--routing links-->
+      <ul class="links-wrapper navbar-nav">
+        <li class="nav-item active ">
+          <a class="link"
+             routerLink="/{{pagesUrlLinks.blocks}}"
+             routerLinkActive="active">{{pagesUrlLinks.blocks}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

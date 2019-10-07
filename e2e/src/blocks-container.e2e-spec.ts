@@ -1,16 +1,16 @@
-import { AppPage } from './app.po';
+import { BlocksPage } from './blocks.container';
 import { browser, logging } from 'protractor';
 
 describe('workspace-project App', () => {
-  let page: AppPage;
+  let page: BlocksPage;
 
   beforeEach(() => {
-    page = new AppPage();
+    page = new BlocksPage();
   });
 
-  it('should display welcome message', () => {
+  it('should have header section on the page', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('KitRUM app is running!');
+    expect(page.getHeaderTag()).toBeDefined();
   });
 
   afterEach(async () => {

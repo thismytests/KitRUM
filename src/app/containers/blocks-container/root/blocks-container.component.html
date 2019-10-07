@@ -1,0 +1,34 @@
+<app-header-section></app-header-section>
+
+<app-content-section style="overflow-y: auto"
+>
+
+  <app-search (items)="onSearch($event)"></app-search>
+
+  <div class="row">
+    <div class="col">
+      <hr>
+    </div>
+  </div>
+
+  <!--pagination-->
+  <div class="row">
+    <div class="col-md-12" *ngIf="pagination?.total_count">
+      <app-pagination [itemsCount]="pagination?.total_count"
+      (currentPage)="onChoosePage($event)"></app-pagination>
+    </div>
+  </div>
+
+
+  <app-blocks [items]="items"></app-blocks>
+
+  <!--pagination-->
+  <div class="row">
+    <div class="col-md-12" *ngIf="pagination?.total_count">
+      <app-pagination [itemsCount]="pagination?.total_count"
+                      (currentPage)="onChoosePage($event)"></app-pagination>
+    </div>
+  </div>
+
+</app-content-section>
+

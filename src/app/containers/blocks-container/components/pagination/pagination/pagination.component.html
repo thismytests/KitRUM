@@ -1,0 +1,11 @@
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item" *ngFor="let item of createAndFillArray(pagesCount);
+                                  let i = index"
+        (click)="choosePage(i +1)">
+      <a *ngIf=" i<=maxPage" class="page-link">{{i + 1}}</a>
+    </li>
+  </ul>
+  <span class="max-result"
+        *ngIf="maxPage < createAndFillArray(pagesCount).length">there are to much pages!!!</span>
+</nav>
